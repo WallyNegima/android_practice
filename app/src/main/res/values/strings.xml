@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">android_practice</string>
+
+    <string name="fab_content_desc">トップへ</string>
 </resources>

@@ -1,6 +1,10 @@
 # Android Practices
 Android sample codes
 
+# Dependencies
+- Material Desig
+- Databinding
+
 # Author
 Shintaro Nagama
 

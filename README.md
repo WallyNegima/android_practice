@@ -4,6 +4,8 @@ Android sample codes
 # Dependencies
 - Material Desig
 - Databinding
+- groupie
+- groupie-viewbinding
 
 # Author
 Shintaro Nagama

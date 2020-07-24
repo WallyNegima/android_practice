@@ -1,13 +1,13 @@
 package wally.wally.android_practice
 
-import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import wally.wally.android_practice.databinding.ActivityMainBinding
+import wally.wally.android_practice.views.viewA.ViewAActivity
+import wally.wally.android_practice.views.viewB.ViewBActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -41,7 +41,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun itemClickHandler(itemId: String) {
-        println(itemId)
+        when (itemId) {
+            VIEW_A -> {
+                val intent = Intent(this, ViewAActivity::class.java)
+                startActivity(intent)
+            }
+            VIEW_B -> {
+                val intent = Intent(this, ViewBActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
     inner class Item(val text: String, val itemId: String)

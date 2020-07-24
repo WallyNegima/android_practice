@@ -2,4 +2,6 @@
     <string name="app_name">android_practice</string>
 
     <string name="fab_content_desc">トップへ</string>
+    <string name="view_a_title">View A</string>
+    <string name="view_b_title">View B</string>
 </resources>

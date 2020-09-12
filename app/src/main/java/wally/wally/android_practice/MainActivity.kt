@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import wally.wally.android_practice.databinding.ActivityMainBinding
+import wally.wally.android_practice.views.jetpackCompose.JetpackComposeActivity
 import wally.wally.android_practice.views.viewA.ViewAActivity
 import wally.wally.android_practice.views.viewB.ViewBActivity
 
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val VIEW_A = "viewA"
         const val VIEW_B = "viewB"
+        const val JETPACK_COMPOSE = "jetpackCompose"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
         val itemList = listOf(
-            Item("ViewAへ", VIEW_A), Item("ViewBへ", VIEW_B)
+            Item("ViewAへ", VIEW_A), Item("ViewBへ", VIEW_B), Item("jetpackCompose", JETPACK_COMPOSE)
         )
         adapter.updateList(itemList)
 
@@ -48,6 +50,10 @@ class MainActivity : AppCompatActivity() {
             }
             VIEW_B -> {
                 val intent = Intent(this, ViewBActivity::class.java)
+                startActivity(intent)
+            }
+            JETPACK_COMPOSE -> {
+                val intent = Intent(this, JetpackComposeActivity::class.java)
                 startActivity(intent)
             }
         }
